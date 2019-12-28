@@ -27,8 +27,20 @@ let todasFontes = vitaminas.map(alimento => alimento.fontes);
 console.log(`Todas as fontes listadas: ${todasFontes}`);
 
 
-// for (fonte of todasFontes) {
-//     let fonteExistente = [];
-   
-//     if (fonte.fontes )
-// }
+let fontesVitaminas = vitA.concat(vitC);
+
+
+for (i = todasFontes.length; i >= 0; i--){
+    
+    for (fonte of fontesVitaminas){
+
+        for (x = 0; x <= vitA.length; x++) {
+            if (fonte == fontesVitaminas[x]) {
+                console.log(`Fontes em comum ${fonte} e ${fontesVitaminas[x]}`);
+            } else {
+                console.log(`Fontes diferentes ${fonte} e ${fontesVitaminas[x]}`);
+            }
+        }
+    }
+}
+
