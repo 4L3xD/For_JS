@@ -87,8 +87,6 @@ https://www.elated.com/category/development/javascript/javascript-arrays/
 https://www.elated.com/manipulating-javascript-arrays/
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
-
-
  
 */
 
