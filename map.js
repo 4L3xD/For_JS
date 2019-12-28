@@ -1,17 +1,18 @@
 let vitaminas = [ {nome: 'C', fontes: ['uva', 'goiaba', 'cereja', 'banana', 'maçã', 'apricó', 'abacate', 'manga']}, {nome: 'A', fontes: ['goiaba', 'cereja', 'apricó', 'oxicoco', 'manga', 'azeitonas' ]} ]
 
-console.log(`${'Vitaminas: ' + vitaminas.map(vitamina => vitamina.nome)}`);
+let nomeVitaminas = vitaminas.map(vitamina => vitamina.nome);
 
-let fonteVitaminas = new Map();
+console.log(`${'Vitaminas: ' + nomeVitaminas}`);
 
-fonteVitaminas.set('goiaba', ['A', 'C']); 
-fonteVitaminas.set('cereja', ['A', 'C']); 
+// let fonteVitaminas = new Map();
 
-fonteVitaminas.get('goiaba');
-fonteVitaminas.get('cereja');
+// fonteVitaminas.set('goiaba', ['A', 'C']); 
+// fonteVitaminas.set('cereja', ['A', 'C']); 
+
+// fonteVitaminas.get('goiaba');
+// fonteVitaminas.get('cereja');
 
 let A, B;
-
 for (let vitamina of vitaminas) {
     if (vitamina.nome === 'A') {
         vitA = vitamina.fontes;
@@ -29,6 +30,8 @@ console.log(`Todas as fontes listadas: ${todasFontes}`);
 
 let fontesVitaminas = vitA.concat(vitC);
 
+let fonteVitaminas = new Map();
+
 
 for (i = todasFontes.length; i >= 0; i--){
     
@@ -36,11 +39,31 @@ for (i = todasFontes.length; i >= 0; i--){
 
         for (x = 0; x <= vitA.length; x++) {
             if (fonte == fontesVitaminas[x]) {
+               
+                fonteVitaminasA = fonteVitaminas.set(fonte, 'A');
+
                 console.log(`Fontes em comum ${fonte} e ${fontesVitaminas[x]}`);
+                console.log(fonteVitaminasA);
+
+            } else {
+                console.log(`Fontes diferentes ${fonte} e ${fontesVitaminas[x]}`);
+            }
+        }
+         
+
+        for (x = 0; x <= vitC.length; x++) {
+            if (fonte == fontesVitaminas[x]) {
+               
+                fonteVitaminasB = fonteVitaminas.set(fonte, 'B');
+
+                console.log(`Fontes em comum ${fonte} e ${fontesVitaminas[x]}`);
+                console.log(fonteVitaminasB);
+
             } else {
                 console.log(`Fontes diferentes ${fonte} e ${fontesVitaminas[x]}`);
             }
         }
     }
 }
+
 
