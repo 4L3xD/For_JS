@@ -32,6 +32,11 @@ let fontesVitaminas = vitA.concat(vitC);
 
 let fonteVitaminas = new Map();
 
+/* melhorar a lógica! Objetivo:
+- construir uma função que compara cada fonte existente entre as vitaminas;
+- se duas vitaminas comparadas possuem uma mesma fonte, então a fonte deve ser mapeada com ambas as vitaminas;
+- listar vitaminas presentes em uma determinada fonte 
+*/
 
 for (i = todasFontes.length; i >= 0; i--){
     
@@ -67,3 +72,4 @@ for (i = todasFontes.length; i >= 0; i--){
 }
 
 
+// Tantos anos olhando os póros e pude ver suas profundidades.
